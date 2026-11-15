@@ -1,89 +1,120 @@
-/* Eduardo Canton Ferreira e Silva 2410837 3WC */
-
+/*Eduardo Canton 2410837 3WC*/
+/*Gabriel Petillo 2521319 3WC*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "gera_codigo.h"
 
-/* Operando: tipo = 'v' (variavel local), 'p' (parametro p0) ou '$' (constante) */
-typedef struct {
+typedef struct  /*Operando do tipo = v(variavel local), p(parametro p0) ou $(constante)*/
+{
     char tipo;
     int val;
 } Operando;
 
-static void emit(unsigned char code[], int *i, int b)
+static void grava_byte(unsigned char code[], int *i, int b)
 {
     code[(*i)++] = (unsigned char)(b & 0xFF);
 }
 
-static void emit_imm(unsigned char code[], int *i, int v)
+static void grava_int32(unsigned char code[], int *i, int v)
 {
-    emit(code, i, v);
-    emit(code, i, v >> 8);
-    emit(code, i, v >> 16);
-    emit(code, i, v >> 24);
+    grava_byte(code, i, v);
+    grava_byte(code, i, v >> 8);
+    grava_byte(code, i, v >> 16);
+    grava_byte(code, i, v >> 24);
 }
 
-/* "v3" -> {'v',3}   "p0" -> {'p',0}   "$-10" -> {'$',-10} */
-static Operando le_op(const char *s)
+static Operando le_op(const char *s)    /*"v3" -> {'v',3}   "p0" -> {'p',0}   "$-10" -> {'$',-10}*/
 {
     Operando o = {0, 0};
     sscanf(s, "%c%d", &o.tipo, &o.val);
     return o;
 }
 
-/* deslocamento em relacao a %rbp: p0 em -4, vN em -8-4*N */
-static int desloc(Operando o)
+static int desloc(Operando o)   /*deslocamento em relacao a %rbp: p0 em -4, variavel local n em -8-4*N*/
 {
-    return (o.tipo == 'p') ? -4 : -8 - 4 * o.val;
-}
-
-static void prologo(unsigned char code[], int *i)
-{
-    emit(code, i, 0x55);                                  /* push %rbp */
-    emit(code, i, 0x48); emit(code, i, 0x89); emit(code, i, 0xE5);   /* mov %rsp,%rbp */
-    emit(code, i, 0x48); emit(code, i, 0x83); emit(code, i, 0xEC); emit(code, i, 0x20); /* sub $0x20,%rsp */
-    emit(code, i, 0x89); emit(code, i, 0x7D); emit(code, i, 0xFC);   /* mov %edi,-4(%rbp): salva p0 */
-}
-
-static void epilogo(unsigned char code[], int *i)
-{
-    emit(code, i, 0xC9);                                  /* leave */
-    emit(code, i, 0xC3);                                  /* ret */
-}
-
-/* %eax <- operando */
-static void carrega_eax(unsigned char code[], int *i, Operando o)
-{
-    if (o.tipo == '$') {
-        emit(code, i, 0xB8);                              /* mov $imm,%eax */
-        emit_imm(code, i, o.val);
-    } else {
-        emit(code, i, 0x8B); emit(code, i, 0x45); emit(code, i, desloc(o)); /* mov d(%rbp),%eax */
+    if(o.tipo == 'p')
+    {
+        return -4;
+    }
+    else
+    {
+        return -8 - 4 * o.val;
     }
 }
 
-/* %eax <- %eax op operando */
-static void aplica_op(unsigned char code[], int *i, char op, Operando o)
+static void carrega_eax(unsigned char code[], int *i, Operando o)   /*%eax <- operando*/
 {
-    if (o.tipo == '$') {
-        if (op == '+')      emit(code, i, 0x05);          /* add $imm,%eax */
-        else if (op == '-') emit(code, i, 0x2D);          /* sub $imm,%eax */
-        else { emit(code, i, 0x69); emit(code, i, 0xC0); } /* imul $imm,%eax,%eax */
-        emit_imm(code, i, o.val);
-    } else {
-        if (op == '+')      emit(code, i, 0x03);          /* add d(%rbp),%eax */
-        else if (op == '-') emit(code, i, 0x2B);          /* sub d(%rbp),%eax */
-        else { emit(code, i, 0x0F); emit(code, i, 0xAF); } /* imul d(%rbp),%eax */
-        emit(code, i, 0x45);
-        emit(code, i, desloc(o));
+    if (o.tipo == '$')
+    {
+        grava_byte(code, i, 0xB8);    /*mov $const,%eax*/
+        grava_int32(code, i, o.val);
+    }
+    else
+    {
+        grava_byte(code, i, 0x8B); grava_byte(code, i, 0x45); grava_byte(code, i, desloc(o)); /*mov d(%rbp),%eax*/
     }
 }
 
-/* d(%rbp) <- %eax, para a variavel vN */
-static void guarda_var(unsigned char code[], int *i, int var)
+static void aplica_op(unsigned char code[], int *i, char op, Operando o)    /*%eax <- (%eax) operação operando*/
 {
-    emit(code, i, 0x89); emit(code, i, 0x45); emit(code, i, -8 - 4 * var);
+    if (o.tipo == '$')
+    {
+        if (o.val >= -128 && o.val <= 127)    /*constante cabe em 1 byte com sinal*/
+        {
+            if (op == '+')
+            {
+                grava_byte(code, i, 0x83); grava_byte(code, i, 0xC0);    /*add $const8,%eax*/
+            }
+            else if (op == '-')
+            {
+                grava_byte(code, i, 0x83); grava_byte(code, i, 0xE8);    /*sub $const8,%eax*/
+            }
+            else
+            {
+                grava_byte(code, i, 0x6B); grava_byte(code, i, 0xC0);    /*imul $const8,%eax,%eax*/
+            }
+            grava_byte(code, i, o.val);
+        }
+        else
+        {
+            if (op == '+')
+            {
+                grava_byte(code, i, 0x05);    /*add $const32,%eax*/
+            }
+            else if (op == '-')
+            {
+                grava_byte(code, i, 0x2D);    /*sub $const32,%eax*/
+            }
+            else
+            {
+                grava_byte(code, i, 0x69); grava_byte(code, i, 0xC0);    /*imul $const32,%eax,%eax*/
+            }
+            grava_int32(code, i, o.val);
+        }
+    }
+    else
+    {
+        if (op == '+')
+        {
+            grava_byte(code, i, 0x03);    /*add d(%rbp),%eax*/
+        }
+        else if (op == '-')
+        {
+            grava_byte(code, i, 0x2B);    /*sub d(%rbp),%eax*/
+        }
+        else
+        {
+            grava_byte(code, i, 0x0F); grava_byte(code, i, 0xAF);   /*imul d(%rbp),%eax*/
+        }
+        grava_byte(code, i, 0x45);
+        grava_byte(code, i, desloc(o));
+    }
+}
+
+static void guardaVar(unsigned char code[], int *i, int var)   /*d(%rbp) <- %eax, para a variavel vN*/
+{
+    grava_byte(code, i, 0x89); grava_byte(code, i, 0x45); grava_byte(code, i, -8 - 4 * var);
 }
 
 void gera_codigo(FILE *f, unsigned char code[], funcp *entry)
@@ -91,63 +122,86 @@ void gera_codigo(FILE *f, unsigned char code[], funcp *entry)
     char linha[100];
     char comando[20];
     char a[20], b[20], op;
-    int i = 0;                  /* proxima posicao livre em code */
-    int function_start[50];     /* inicio de cada funcao LBS */
+    int i = 0;      /*proxima posicao livre em code*/
+    int function_start[50];     /*inicio de cada funcao LBS*/
     int num_functions = 0;
     int var, num_func, salto;
-
+    int saltos_fim[50];     /*posicao do rel32 de cada jmp (de ret/zret) que vai para o end*/
+    int num_saltos = 0;
+    int fim, k, p, rel;
+    
     *entry = NULL;
     while (fgets(linha, sizeof(linha), f) != NULL)
     {
         if (sscanf(linha, "%19s", comando) != 1)
+        {
             continue;
-
-        if (strcmp(comando, "function") == 0)
+        }
+        if (comando[0] == 'f')
         {
             function_start[num_functions++] = i;
+            num_saltos = 0;
             *entry = (funcp) &code[i];
-            prologo(code, &i);
+            grava_byte(code, &i, 0x55);    /*push %rbp*/
+            grava_byte(code, &i, 0x48); grava_byte(code, &i, 0x89); grava_byte(code, &i, 0xE5);  /*mov %rsp,%rbp*/
+            grava_byte(code, &i, 0x48); grava_byte(code, &i, 0x83); grava_byte(code, &i, 0xEC); grava_byte(code, &i, 0x20); /*sub $0x20,%rsp*/
+            grava_byte(code, &i, 0x89); grava_byte(code, &i, 0x7D); grava_byte(code, &i, 0xFC);  /*mov %edi,-4(%rbp): salva p0*/
         }
-        else if (strcmp(comando, "end") == 0)
+        else if (comando[0] == 'e')
         {
-            /* o epilogo ja foi gerado pelo ret */
+            fim = i;                       /*aqui comeca o leave; ret desta funcao*/
+            grava_byte(code, &i, 0xC9);    /*leave*/
+            grava_byte(code, &i, 0xC3);    /*ret*/
+            for (k = 0; k < num_saltos; k++)    /*preenche os jmp de ret/zret*/
+            {
+                p = saltos_fim[k];
+                rel = fim - (p + 4);       /*destino - endereco da proxima instrucao*/
+                grava_int32(code, &p, rel);
+            }
         }
-        else if (strcmp(comando, "ret") == 0)
+        else if (comando[0] == 'r')
         {
             sscanf(linha, "ret %19s", a);
             carrega_eax(code, &i, le_op(a));
-            epilogo(code, &i);
+            grava_byte(code, &i, 0xE9);    /*jmp rel32 (para o end)*/
+            saltos_fim[num_saltos++] = i;
+            grava_int32(code, &i, 0);      /*provisorio: preenchido no end*/
         }
-        else if (strcmp(comando, "zret") == 0)
+        else if (comando[0] == 'z')
         {
             sscanf(linha, "zret %19s %19s", a, b);
             carrega_eax(code, &i, le_op(a));
-            emit(code, &i, 0x83); emit(code, &i, 0xF8); emit(code, &i, 0x00); /* cmp $0,%eax */
-            emit(code, &i, 0x75);                                             /* jne */
+            grava_byte(code, &i, 0x83); grava_byte(code, &i, 0xF8); grava_byte(code, &i, 0x00);   /*cmp $0,%eax*/
+            grava_byte(code, &i, 0x75);   /*jne*/
             salto = i;
-            emit(code, &i, 0x00);
+            grava_byte(code, &i, 0x00);
             carrega_eax(code, &i, le_op(b));
-            epilogo(code, &i);
+            grava_byte(code, &i, 0xE9);    /*jmp rel32 (para o end)*/
+            saltos_fim[num_saltos++] = i;
+            grava_int32(code, &i, 0);      /*provisorio: preenchido no end*/
             code[salto] = (unsigned char)(i - (salto + 1));
         }
         else if (sscanf(linha, "v%d = call %d %19s", &var, &num_func, a) == 3)
         {
             Operando o = le_op(a);
-            if (o.tipo == '$') {
-                emit(code, &i, 0xBF);                                         /* mov $imm,%edi */
-                emit_imm(code, &i, o.val);
-            } else {
-                emit(code, &i, 0x8B); emit(code, &i, 0x7D); emit(code, &i, desloc(o)); /* mov d(%rbp),%edi */
+            if (o.tipo == '$')
+            {
+                grava_byte(code, &i, 0xBF);   /*mov $const,%edi*/
+                grava_int32(code, &i, o.val);
             }
-            emit(code, &i, 0xE8);                                             /* call rel32 */
-            emit_imm(code, &i, function_start[num_func] - (i + 4));
-            guarda_var(code, &i, var);
+            else
+            {
+                grava_byte(code, &i, 0x8B); grava_byte(code, &i, 0x7D); grava_byte(code, &i, desloc(o));  /*mov d(%rbp),%edi*/
+            }
+            grava_byte(code, &i, 0xE8);   /*call rel32*/
+            grava_int32(code, &i, function_start[num_func] - (i + 4));
+            guardaVar(code, &i, var);
         }
         else if (sscanf(linha, "v%d = %19s %c %19s", &var, a, &op, b) == 4)
         {
             carrega_eax(code, &i, le_op(a));
             aplica_op(code, &i, op, le_op(b));
-            guarda_var(code, &i, var);
+            guardaVar(code, &i, var);
         }
     }
 }
