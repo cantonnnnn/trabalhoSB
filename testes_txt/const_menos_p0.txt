@@ -1,0 +1,4 @@
+function
+v0 = $10 - p0
+ret v0
+end

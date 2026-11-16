@@ -1,0 +1,49 @@
+function
+v0 = p0 + $1
+ret v0
+end
+function
+v0 = call 0 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 1 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 2 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 3 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 4 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 5 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 6 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 7 p0
+v0 = v0 + $1
+ret v0
+end
+function
+v0 = call 8 p0
+v0 = v0 + $1
+ret v0
+end

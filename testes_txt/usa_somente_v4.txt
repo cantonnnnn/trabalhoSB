@@ -1,0 +1,5 @@
+function
+v4 = p0 * $3
+v4 = v4 + $1
+ret v4
+end

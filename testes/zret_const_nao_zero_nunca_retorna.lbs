@@ -1,0 +1,4 @@
+function
+zret $5 $7
+ret $8
+end

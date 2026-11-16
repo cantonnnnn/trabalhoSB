@@ -1,0 +1,8 @@
+function
+v0 = p0 + $2
+v1 = p0 * $3
+v2 = v0 - v1
+v3 = v1 - v0
+v4 = v2 * v3
+ret v4
+end

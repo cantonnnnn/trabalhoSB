@@ -1,0 +1,21 @@
+function
+v0 = $1000 + $0
+v1 = $2000 + $0
+v2 = $3000 + $0
+v3 = $4000 + $0
+v4 = $5000 + $0
+v0 = p0 + $1
+ret v0
+end
+function
+v0 = p0 + $10
+v1 = p0 + $20
+v2 = p0 + $30
+v3 = p0 + $40
+v4 = call 0 p0
+v0 = v0 + v1
+v0 = v0 + v2
+v0 = v0 + v3
+v0 = v0 + v4
+ret v0
+end

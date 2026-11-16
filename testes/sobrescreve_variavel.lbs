@@ -1,0 +1,6 @@
+function
+v0 = $1 + $1
+v0 = $5 + $5
+v0 = v0 - $3
+ret v0
+end

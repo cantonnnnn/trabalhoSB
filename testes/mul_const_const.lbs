@@ -1,0 +1,4 @@
+function
+v0 = $-6 * $7
+ret v0
+end

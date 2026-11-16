@@ -1,0 +1,4 @@
+function
+zret $-1 $7
+ret $8
+end

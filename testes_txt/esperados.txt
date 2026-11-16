@@ -1,0 +1,1266 @@
+== enunciado_1_ret_constante.txt  (codigo gerado: 23 bytes)
+   f(0) = 100
+   f(1) = 100
+   f(-1) = 100
+   f(7) = 100
+   f(100) = 100
+
+== enunciado_2_x_mais_1.txt  (codigo gerado: 30 bytes)
+   f(0) = 1
+   f(1) = 2
+   f(-1) = 0
+   f(5) = 6
+   f(41) = 42
+   f(-100) = -99
+   f(2147483647) = -2147483648
+
+== enunciado_3_fatorial.txt  (codigo gerado: 78 bytes)
+   f(0) = 1
+   f(1) = 1
+   f(2) = 2
+   f(3) = 6
+   f(5) = 120
+   f(10) = 3628800
+   f(12) = 479001600
+
+== enunciado_4_soma_quadrados.txt  (codigo gerado: 110 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(2) = 5
+   f(3) = 14
+   f(10) = 385
+   f(50) = 42925
+   f(100) = 338350
+
+== ret_p0.txt  (codigo gerado: 21 bytes)
+   f(0) = 0
+   f(5) = 5
+   f(-5) = -5
+   f(2147483647) = 2147483647
+   f(-2147483648) = -2147483648
+
+== ret_constante_zero.txt  (codigo gerado: 23 bytes)
+   f(0) = 0
+   f(1) = 0
+   f(-1) = 0
+   f(7) = 0
+   f(100) = 0
+
+== ret_constante_negativa.txt  (codigo gerado: 23 bytes)
+   f(0) = -42
+   f(1) = -42
+   f(-1) = -42
+   f(7) = -42
+   f(100) = -42
+
+== ret_constante_grande.txt  (codigo gerado: 23 bytes)
+   f(0) = 2147483647
+   f(1) = 2147483647
+   f(-1) = 2147483647
+   f(7) = 2147483647
+   f(100) = 2147483647
+
+== ret_constante_minima.txt  (codigo gerado: 23 bytes)
+   f(0) = -2147483648
+   f(1) = -2147483648
+   f(-1) = -2147483648
+   f(7) = -2147483648
+   f(100) = -2147483648
+
+== ret_constante_com_mais.txt  (codigo gerado: 23 bytes)
+   f(0) = 5
+   f(1) = 5
+   f(-1) = 5
+   f(7) = 5
+   f(100) = 5
+
+== ret_variavel.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(-1) = -1
+   f(7) = 7
+   f(-7) = -7
+   f(100) = 100
+
+== ret_ignora_codigo_depois.txt  (codigo gerado: 40 bytes)
+   f(0) = 1
+   f(1) = 1
+   f(-1) = 1
+   f(7) = 1
+   f(100) = 1
+
+== soma_const_const.txt  (codigo gerado: 32 bytes)
+   f(0) = 7
+   f(1) = 7
+   f(-1) = 7
+   f(7) = 7
+   f(100) = 7
+
+== sub_const_const.txt  (codigo gerado: 32 bytes)
+   f(0) = -7
+   f(1) = -7
+   f(-1) = -7
+   f(7) = -7
+   f(100) = -7
+
+== mul_const_const.txt  (codigo gerado: 32 bytes)
+   f(0) = -42
+   f(1) = -42
+   f(-1) = -42
+   f(7) = -42
+   f(100) = -42
+
+== soma_p0_p0.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 2
+   f(-1) = -2
+   f(7) = 14
+   f(-7) = -14
+   f(100) = 200
+
+== sub_p0_p0.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 0
+   f(-1) = 0
+   f(7) = 0
+   f(-7) = 0
+   f(100) = 0
+
+== mul_p0_p0.txt  (codigo gerado: 31 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(-1) = 1
+   f(7) = 49
+   f(-7) = 49
+   f(100) = 10000
+   f(46341) = -2147479015
+   f(-46341) = -2147479015
+
+== const_menos_p0.txt  (codigo gerado: 32 bytes)
+   f(0) = 10
+   f(1) = 9
+   f(-1) = 11
+   f(7) = 3
+   f(-7) = 17
+   f(100) = -90
+
+== p0_menos_const.txt  (codigo gerado: 30 bytes)
+   f(0) = -10
+   f(1) = -9
+   f(-1) = -11
+   f(7) = -3
+   f(-7) = -17
+   f(100) = 90
+
+== mul_por_zero.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 0
+   f(-1) = 0
+   f(7) = 0
+   f(-7) = 0
+   f(100) = 0
+
+== mul_por_um.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(-1) = -1
+   f(7) = 7
+   f(-7) = -7
+   f(100) = 100
+
+== mul_por_menos_um.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = -1
+   f(-1) = 1
+   f(7) = -7
+   f(-7) = 7
+   f(100) = -100
+
+== soma_zero.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(-1) = -1
+   f(7) = 7
+   f(-7) = -7
+   f(100) = 100
+
+== imm_soma_127.txt  (codigo gerado: 30 bytes)
+   f(0) = 127
+   f(1) = 128
+   f(-1) = 126
+   f(3) = 130
+   f(-3) = 124
+   f(1000) = 1127
+
+== imm_sub_127.txt  (codigo gerado: 30 bytes)
+   f(0) = -127
+   f(1) = -126
+   f(-1) = -128
+   f(3) = -124
+   f(-3) = -130
+   f(1000) = 873
+
+== imm_mul_127.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 127
+   f(-1) = -127
+   f(3) = 381
+   f(-3) = -381
+   f(1000) = 127000
+
+== imm_soma_128.txt  (codigo gerado: 32 bytes)
+   f(0) = 128
+   f(1) = 129
+   f(-1) = 127
+   f(3) = 131
+   f(-3) = 125
+   f(1000) = 1128
+
+== imm_sub_128.txt  (codigo gerado: 32 bytes)
+   f(0) = -128
+   f(1) = -127
+   f(-1) = -129
+   f(3) = -125
+   f(-3) = -131
+   f(1000) = 872
+
+== imm_mul_128.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = 128
+   f(-1) = -128
+   f(3) = 384
+   f(-3) = -384
+   f(1000) = 128000
+
+== imm_soma_-128.txt  (codigo gerado: 30 bytes)
+   f(0) = -128
+   f(1) = -127
+   f(-1) = -129
+   f(3) = -125
+   f(-3) = -131
+   f(1000) = 872
+
+== imm_sub_-128.txt  (codigo gerado: 30 bytes)
+   f(0) = 128
+   f(1) = 129
+   f(-1) = 127
+   f(3) = 131
+   f(-3) = 125
+   f(1000) = 1128
+
+== imm_mul_-128.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = -128
+   f(-1) = 128
+   f(3) = -384
+   f(-3) = 384
+   f(1000) = -128000
+
+== imm_soma_-129.txt  (codigo gerado: 32 bytes)
+   f(0) = -129
+   f(1) = -128
+   f(-1) = -130
+   f(3) = -126
+   f(-3) = -132
+   f(1000) = 871
+
+== imm_sub_-129.txt  (codigo gerado: 32 bytes)
+   f(0) = 129
+   f(1) = 130
+   f(-1) = 128
+   f(3) = 132
+   f(-3) = 126
+   f(1000) = 1129
+
+== imm_mul_-129.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = -129
+   f(-1) = 129
+   f(3) = -387
+   f(-3) = 387
+   f(1000) = -129000
+
+== imm_soma_255.txt  (codigo gerado: 32 bytes)
+   f(0) = 255
+   f(1) = 256
+   f(-1) = 254
+   f(3) = 258
+   f(-3) = 252
+   f(1000) = 1255
+
+== imm_sub_255.txt  (codigo gerado: 32 bytes)
+   f(0) = -255
+   f(1) = -254
+   f(-1) = -256
+   f(3) = -252
+   f(-3) = -258
+   f(1000) = 745
+
+== imm_mul_255.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = 255
+   f(-1) = -255
+   f(3) = 765
+   f(-3) = -765
+   f(1000) = 255000
+
+== imm_soma_256.txt  (codigo gerado: 32 bytes)
+   f(0) = 256
+   f(1) = 257
+   f(-1) = 255
+   f(3) = 259
+   f(-3) = 253
+   f(1000) = 1256
+
+== imm_sub_256.txt  (codigo gerado: 32 bytes)
+   f(0) = -256
+   f(1) = -255
+   f(-1) = -257
+   f(3) = -253
+   f(-3) = -259
+   f(1000) = 744
+
+== imm_mul_256.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = 256
+   f(-1) = -256
+   f(3) = 768
+   f(-3) = -768
+   f(1000) = 256000
+
+== imm_soma_32767.txt  (codigo gerado: 32 bytes)
+   f(0) = 32767
+   f(1) = 32768
+   f(-1) = 32766
+   f(3) = 32770
+   f(-3) = 32764
+   f(1000) = 33767
+
+== imm_sub_32767.txt  (codigo gerado: 32 bytes)
+   f(0) = -32767
+   f(1) = -32766
+   f(-1) = -32768
+   f(3) = -32764
+   f(-3) = -32770
+   f(1000) = -31767
+
+== imm_mul_32767.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = 32767
+   f(-1) = -32767
+   f(3) = 98301
+   f(-3) = -98301
+   f(1000) = 32767000
+
+== imm_soma_65536.txt  (codigo gerado: 32 bytes)
+   f(0) = 65536
+   f(1) = 65537
+   f(-1) = 65535
+   f(3) = 65539
+   f(-3) = 65533
+   f(1000) = 66536
+
+== imm_sub_65536.txt  (codigo gerado: 32 bytes)
+   f(0) = -65536
+   f(1) = -65535
+   f(-1) = -65537
+   f(3) = -65533
+   f(-3) = -65539
+   f(1000) = -64536
+
+== imm_mul_65536.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = 65536
+   f(-1) = -65536
+   f(3) = 196608
+   f(-3) = -196608
+   f(1000) = 65536000
+
+== imm_soma_2147483647.txt  (codigo gerado: 32 bytes)
+   f(0) = 2147483647
+   f(1) = -2147483648
+   f(-1) = 2147483646
+   f(3) = -2147483646
+   f(-3) = 2147483644
+   f(1000) = -2147482649
+
+== imm_sub_2147483647.txt  (codigo gerado: 32 bytes)
+   f(0) = -2147483647
+   f(1) = -2147483646
+   f(-1) = -2147483648
+   f(3) = -2147483644
+   f(-3) = 2147483646
+   f(1000) = -2147482647
+
+== imm_mul_2147483647.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = 2147483647
+   f(-1) = -2147483647
+   f(3) = 2147483645
+   f(-3) = -2147483645
+   f(1000) = -1000
+
+== imm_soma_-2147483648.txt  (codigo gerado: 32 bytes)
+   f(0) = -2147483648
+   f(1) = -2147483647
+   f(-1) = 2147483647
+   f(3) = -2147483645
+   f(-3) = 2147483645
+   f(1000) = -2147482648
+
+== imm_sub_-2147483648.txt  (codigo gerado: 32 bytes)
+   f(0) = -2147483648
+   f(1) = -2147483647
+   f(-1) = 2147483647
+   f(3) = -2147483645
+   f(-3) = 2147483645
+   f(1000) = -2147482648
+
+== imm_mul_-2147483648.txt  (codigo gerado: 33 bytes)
+   f(0) = 0
+   f(1) = -2147483648
+   f(-1) = -2147483648
+   f(3) = -2147483648
+   f(-3) = -2147483648
+   f(1000) = 0
+
+== overflow_soma.txt  (codigo gerado: 32 bytes)
+   f(1) = -2147483648
+   f(2) = -2147483647
+   f(2147483647) = -2
+   f(-1) = 2147483646
+
+== overflow_sub.txt  (codigo gerado: 32 bytes)
+   f(-2) = 2147483647
+   f(-3) = 2147483646
+   f(-2147483648) = 1
+   f(0) = -2147483647
+
+== overflow_mul.txt  (codigo gerado: 41 bytes)
+   f(1000) = 1000000000
+   f(2000) = -589934592
+   f(100000) = -1530494976
+   f(-100000) = 1530494976
+   f(2147483647) = 2147483647
+
+== todas_5_variaveis.txt  (codigo gerado: 104 bytes)
+   f(0) = 9
+   f(1) = 20
+   f(-1) = 2
+   f(7) = 170
+   f(-7) = 44
+   f(100) = 20909
+
+== variaveis_independentes.txt  (codigo gerado: 139 bytes)
+   f(0) = 44
+   f(1) = 44
+   f(-1) = 44
+   f(7) = 44
+   f(100) = 44
+
+== usa_somente_v0.txt  (codigo gerado: 39 bytes)
+   f(0) = 1
+   f(1) = 4
+   f(-1) = -2
+   f(7) = 22
+   f(-7) = -20
+   f(100) = 301
+
+== usa_somente_v1.txt  (codigo gerado: 39 bytes)
+   f(0) = 1
+   f(1) = 4
+   f(-1) = -2
+   f(7) = 22
+   f(-7) = -20
+   f(100) = 301
+
+== usa_somente_v2.txt  (codigo gerado: 39 bytes)
+   f(0) = 1
+   f(1) = 4
+   f(-1) = -2
+   f(7) = 22
+   f(-7) = -20
+   f(100) = 301
+
+== usa_somente_v3.txt  (codigo gerado: 39 bytes)
+   f(0) = 1
+   f(1) = 4
+   f(-1) = -2
+   f(7) = 22
+   f(-7) = -20
+   f(100) = 301
+
+== usa_somente_v4.txt  (codigo gerado: 39 bytes)
+   f(0) = 1
+   f(1) = 4
+   f(-1) = -2
+   f(7) = 22
+   f(-7) = -20
+   f(100) = 301
+
+== var_op_var_mesma.txt  (codigo gerado: 49 bytes)
+   f(0) = 0
+   f(1) = 4
+   f(-1) = 4
+   f(7) = 196
+   f(-7) = 196
+   f(100) = 40000
+
+== sobrescreve_variavel.txt  (codigo gerado: 52 bytes)
+   f(0) = 7
+   f(1) = 7
+   f(-1) = 7
+   f(7) = 7
+   f(100) = 7
+
+== var_const_primeiro.txt  (codigo gerado: 41 bytes)
+   f(0) = 98
+   f(1) = 97
+   f(-1) = 99
+   f(7) = 91
+   f(-7) = 105
+   f(100) = -2
+
+== var_var_diferentes.txt  (codigo gerado: 67 bytes)
+   f(0) = -4
+   f(1) = 0
+   f(-1) = -16
+   f(7) = -144
+   f(-7) = -256
+   f(100) = -39204
+
+== expressao_longa.txt  (codigo gerado: 68 bytes)
+   f(0) = 1
+   f(1) = 4
+   f(-1) = 0
+   f(7) = 400
+   f(-7) = -300
+   f(100) = 1010101
+
+== zret_retorna_quando_zero.txt  (codigo gerado: 41 bytes)
+   f(0) = 99
+   f(1) = 1
+   f(-1) = 1
+   f(5) = 1
+
+== zret_ret_p0.txt  (codigo gerado: 39 bytes)
+   f(0) = 0
+   f(1) = 5
+   f(-1) = 5
+   f(5) = 5
+
+== zret_const_zero_sempre_retorna.txt  (codigo gerado: 43 bytes)
+   f(0) = 7
+   f(1) = 7
+   f(-1) = 7
+   f(7) = 7
+   f(100) = 7
+
+== zret_const_nao_zero_nunca_retorna.txt  (codigo gerado: 43 bytes)
+   f(0) = 8
+   f(1) = 8
+   f(-1) = 8
+   f(7) = 8
+   f(100) = 8
+
+== zret_const_negativa_nao_retorna.txt  (codigo gerado: 43 bytes)
+   f(0) = 8
+   f(1) = 8
+   f(-1) = 8
+   f(7) = 8
+   f(100) = 8
+
+== zret_com_variavel.txt  (codigo gerado: 50 bytes)
+   f(3) = 100
+   f(4) = 200
+   f(2) = 200
+   f(0) = 200
+
+== zret_segundo_operando_var.txt  (codigo gerado: 48 bytes)
+   f(0) = 0
+   f(1) = -1
+   f(5) = -1
+
+== zret_encadeados.txt  (codigo gerado: 95 bytes)
+   f(0) = 10
+   f(1) = 20
+   f(2) = 30
+   f(3) = 40
+   f(-1) = 40
+
+== zret_no_meio_e_calculo_depois.txt  (codigo gerado: 66 bytes)
+   f(0) = 0
+   f(1) = 3
+   f(-1) = -1
+   f(7) = 15
+   f(-7) = -13
+   f(100) = 201
+
+== zret_apos_operacao_grande.txt  (codigo gerado: 65 bytes)
+   f(0) = 1
+   f(1) = 2
+   f(5) = 2
+   f(42949) = 2
+   f(65536) = 2
+
+== call_constante.txt  (codigo gerado: 64 bytes)
+   f(0) = 42
+   f(1) = 42
+
+== call_p0.txt  (codigo gerado: 62 bytes)
+   f(0) = 0
+   f(1) = 2
+   f(-1) = -2
+   f(7) = 14
+   f(-7) = -14
+   f(100) = 200
+
+== call_variavel.txt  (codigo gerado: 71 bytes)
+   f(0) = 1
+   f(1) = 4
+   f(-1) = -2
+   f(7) = 22
+   f(-7) = -20
+   f(100) = 301
+
+== call_resultado_na_mesma_var.txt  (codigo gerado: 71 bytes)
+   f(0) = 6
+   f(1) = 7
+   f(-1) = 5
+   f(7) = 13
+   f(-7) = -1
+   f(100) = 106
+
+== call_constante_negativa.txt  (codigo gerado: 65 bytes)
+   f(0) = 81
+
+== call_duas_vezes_seguidas.txt  (codigo gerado: 73 bytes)
+   f(0) = 0
+   f(1) = 4
+   f(-1) = -4
+   f(7) = 28
+   f(-7) = -28
+   f(100) = 400
+
+== call_preserva_variaveis_do_chamador.txt  (codigo gerado: 189 bytes)
+   f(0) = 101
+   f(1) = 106
+   f(-1) = 96
+   f(7) = 136
+   f(-7) = 66
+   f(100) = 601
+
+== call_preserva_parametro_do_chamador.txt  (codigo gerado: 73 bytes)
+   f(0) = 700
+   f(1) = 701
+   f(-1) = 699
+   f(7) = 707
+   f(-7) = 693
+   f(100) = 800
+
+== call_encadeada_3_funcoes.txt  (codigo gerado: 114 bytes)
+   f(0) = 3
+   f(1) = 5
+   f(-1) = 1
+   f(7) = 17
+   f(-7) = -11
+   f(100) = 203
+
+== call_funcao_do_meio_nao_e_a_ultima.txt  (codigo gerado: 98 bytes)
+   f(0) = 3
+
+== call_so_a_ultima_e_o_entry.txt  (codigo gerado: 69 bytes)
+   f(0) = 3
+
+== call_10_funcoes_em_cadeia.txt  (codigo gerado: 399 bytes)
+   f(0) = 10
+   f(5) = 15
+   f(-20) = -10
+
+== call_funcao_chama_varias_anteriores.txt  (codigo gerado: 162 bytes)
+   f(0) = -2
+   f(1) = 2
+   f(-1) = -6
+   f(7) = 26
+   f(-7) = -30
+   f(100) = 398
+
+== call_usa_zret_na_callee.txt  (codigo gerado: 93 bytes)
+   f(0) = 200
+   f(1) = 101
+   f(-1) = 99
+   f(7) = 107
+   f(-7) = 93
+   f(100) = 200
+
+== rec_fatorial_sem_v0.txt  (codigo gerado: 69 bytes)
+   f(0) = 1
+   f(1) = 1
+   f(2) = 2
+   f(3) = 6
+   f(4) = 24
+   f(5) = 120
+   f(6) = 720
+   f(10) = 3628800
+   f(12) = 479001600
+
+== rec_soma_1_ate_n.txt  (codigo gerado: 68 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(2) = 3
+   f(10) = 55
+   f(100) = 5050
+   f(1000) = 500500
+
+== rec_fibonacci.txt  (codigo gerado: 106 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(2) = 1
+   f(3) = 2
+   f(5) = 5
+   f(10) = 55
+   f(15) = 610
+   f(20) = 6765
+
+== rec_potencia_de_2.txt  (codigo gerado: 68 bytes)
+   f(0) = 1
+   f(1) = 2
+   f(2) = 4
+   f(10) = 1024
+   f(20) = 1048576
+   f(30) = 1073741824
+   f(31) = -2147483648
+   f(32) = 0
+
+== rec_contagem_regressiva_retorna_0.txt  (codigo gerado: 59 bytes)
+   f(0) = 0
+   f(1) = 0
+   f(5) = 0
+   f(50) = 0
+   f(5000) = 0
+
+== rec_profunda_10000.txt  (codigo gerado: 68 bytes)
+   f(10000) = 10000
+
+== rec_com_funcao_auxiliar.txt  (codigo gerado: 110 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(2) = 5
+   f(5) = 55
+   f(10) = 385
+
+== rec_usa_todas_as_5_variaveis.txt  (codigo gerado: 113 bytes)
+   f(0) = 0
+   f(1) = 9
+   f(2) = 21
+   f(5) = 75
+   f(20) = 750
+
+== arquivo_com_linha_em_branco_no_final.txt  (codigo gerado: 30 bytes)
+   f(0) = 1
+   f(1) = 2
+   f(-1) = 0
+   f(7) = 8
+   f(-7) = -6
+   f(100) = 101
+
+== arquivo_com_crlf.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 3
+   f(-1) = -3
+   f(7) = 21
+   f(-7) = -21
+   f(100) = 300
+
+== arquivo_sem_newline_final.txt  (codigo gerado: 30 bytes)
+   f(0) = 0
+   f(1) = 3
+   f(-1) = -3
+   f(7) = 21
+   f(-7) = -21
+   f(100) = 300
+
+== arquivo_50_linhas.txt  (codigo gerado: 435 bytes)
+   f(0) = 2
+   f(1) = 3
+   f(-50) = -48
+
+== matriz_soma_c7_c5.txt  (codigo gerado: 41 bytes)
+   f(0) = 12
+   f(1) = 12
+   f(-7) = 12
+   f(123) = 12
+   f(100000) = 12
+   f(2147483647) = 12
+
+== matriz_soma_c7_neg129.txt  (codigo gerado: 43 bytes)
+   f(0) = -122
+   f(1) = -122
+   f(-7) = -122
+   f(123) = -122
+   f(100000) = -122
+   f(2147483647) = -122
+
+== matriz_soma_c7_c100000.txt  (codigo gerado: 43 bytes)
+   f(0) = 100007
+   f(1) = 100007
+   f(-7) = 100007
+   f(123) = 100007
+   f(100000) = 100007
+   f(2147483647) = 100007
+
+== matriz_soma_c7_p0.txt  (codigo gerado: 41 bytes)
+   f(0) = 7
+   f(1) = 8
+   f(-7) = 0
+   f(123) = 130
+   f(100000) = 100007
+   f(2147483647) = -2147483642
+
+== matriz_soma_c7_v0.txt  (codigo gerado: 41 bytes)
+   f(0) = 10
+   f(1) = 11
+   f(-7) = 3
+   f(123) = 133
+   f(100000) = 100010
+   f(2147483647) = -2147483639
+
+== matriz_soma_neg300_c5.txt  (codigo gerado: 41 bytes)
+   f(0) = -295
+   f(1) = -295
+   f(-7) = -295
+   f(123) = -295
+   f(100000) = -295
+   f(2147483647) = -295
+
+== matriz_soma_neg300_neg129.txt  (codigo gerado: 43 bytes)
+   f(0) = -429
+   f(1) = -429
+   f(-7) = -429
+   f(123) = -429
+   f(100000) = -429
+   f(2147483647) = -429
+
+== matriz_soma_neg300_c100000.txt  (codigo gerado: 43 bytes)
+   f(0) = 99700
+   f(1) = 99700
+   f(-7) = 99700
+   f(123) = 99700
+   f(100000) = 99700
+   f(2147483647) = 99700
+
+== matriz_soma_neg300_p0.txt  (codigo gerado: 41 bytes)
+   f(0) = -300
+   f(1) = -299
+   f(-7) = -307
+   f(123) = -177
+   f(100000) = 99700
+   f(2147483647) = 2147483347
+
+== matriz_soma_neg300_v0.txt  (codigo gerado: 41 bytes)
+   f(0) = -297
+   f(1) = -296
+   f(-7) = -304
+   f(123) = -174
+   f(100000) = 99703
+   f(2147483647) = 2147483350
+
+== matriz_soma_p0_c5.txt  (codigo gerado: 39 bytes)
+   f(0) = 5
+   f(1) = 6
+   f(-7) = -2
+   f(123) = 128
+   f(100000) = 100005
+   f(2147483647) = -2147483644
+
+== matriz_soma_p0_neg129.txt  (codigo gerado: 41 bytes)
+   f(0) = -129
+   f(1) = -128
+   f(-7) = -136
+   f(123) = -6
+   f(100000) = 99871
+   f(2147483647) = 2147483518
+
+== matriz_soma_p0_c100000.txt  (codigo gerado: 41 bytes)
+   f(0) = 100000
+   f(1) = 100001
+   f(-7) = 99993
+   f(123) = 100123
+   f(100000) = 200000
+   f(2147483647) = -2147383649
+
+== matriz_soma_p0_p0.txt  (codigo gerado: 39 bytes)
+   f(0) = 0
+   f(1) = 2
+   f(-7) = -14
+   f(123) = 246
+   f(100000) = 200000
+   f(2147483647) = -2
+
+== matriz_soma_p0_v0.txt  (codigo gerado: 39 bytes)
+   f(0) = 3
+   f(1) = 5
+   f(-7) = -11
+   f(123) = 249
+   f(100000) = 200003
+   f(2147483647) = 1
+
+== matriz_soma_v0_c5.txt  (codigo gerado: 39 bytes)
+   f(0) = 8
+   f(1) = 9
+   f(-7) = 1
+   f(123) = 131
+   f(100000) = 100008
+   f(2147483647) = -2147483641
+
+== matriz_soma_v0_neg129.txt  (codigo gerado: 41 bytes)
+   f(0) = -126
+   f(1) = -125
+   f(-7) = -133
+   f(123) = -3
+   f(100000) = 99874
+   f(2147483647) = 2147483521
+
+== matriz_soma_v0_c100000.txt  (codigo gerado: 41 bytes)
+   f(0) = 100003
+   f(1) = 100004
+   f(-7) = 99996
+   f(123) = 100126
+   f(100000) = 200003
+   f(2147483647) = -2147383646
+
+== matriz_soma_v0_p0.txt  (codigo gerado: 39 bytes)
+   f(0) = 3
+   f(1) = 5
+   f(-7) = -11
+   f(123) = 249
+   f(100000) = 200003
+   f(2147483647) = 1
+
+== matriz_soma_v0_v0.txt  (codigo gerado: 39 bytes)
+   f(0) = 6
+   f(1) = 8
+   f(-7) = -8
+   f(123) = 252
+   f(100000) = 200006
+   f(2147483647) = 4
+
+== matriz_sub_c7_c5.txt  (codigo gerado: 41 bytes)
+   f(0) = 2
+   f(1) = 2
+   f(-7) = 2
+   f(123) = 2
+   f(100000) = 2
+   f(2147483647) = 2
+
+== matriz_sub_c7_neg129.txt  (codigo gerado: 43 bytes)
+   f(0) = 136
+   f(1) = 136
+   f(-7) = 136
+   f(123) = 136
+   f(100000) = 136
+   f(2147483647) = 136
+
+== matriz_sub_c7_c100000.txt  (codigo gerado: 43 bytes)
+   f(0) = -99993
+   f(1) = -99993
+   f(-7) = -99993
+   f(123) = -99993
+   f(100000) = -99993
+   f(2147483647) = -99993
+
+== matriz_sub_c7_p0.txt  (codigo gerado: 41 bytes)
+   f(0) = 7
+   f(1) = 6
+   f(-7) = 14
+   f(123) = -116
+   f(100000) = -99993
+   f(2147483647) = -2147483640
+
+== matriz_sub_c7_v0.txt  (codigo gerado: 41 bytes)
+   f(0) = 4
+   f(1) = 3
+   f(-7) = 11
+   f(123) = -119
+   f(100000) = -99996
+   f(2147483647) = -2147483643
+
+== matriz_sub_neg300_c5.txt  (codigo gerado: 41 bytes)
+   f(0) = -305
+   f(1) = -305
+   f(-7) = -305
+   f(123) = -305
+   f(100000) = -305
+   f(2147483647) = -305
+
+== matriz_sub_neg300_neg129.txt  (codigo gerado: 43 bytes)
+   f(0) = -171
+   f(1) = -171
+   f(-7) = -171
+   f(123) = -171
+   f(100000) = -171
+   f(2147483647) = -171
+
+== matriz_sub_neg300_c100000.txt  (codigo gerado: 43 bytes)
+   f(0) = -100300
+   f(1) = -100300
+   f(-7) = -100300
+   f(123) = -100300
+   f(100000) = -100300
+   f(2147483647) = -100300
+
+== matriz_sub_neg300_p0.txt  (codigo gerado: 41 bytes)
+   f(0) = -300
+   f(1) = -301
+   f(-7) = -293
+   f(123) = -423
+   f(100000) = -100300
+   f(2147483647) = 2147483349
+
+== matriz_sub_neg300_v0.txt  (codigo gerado: 41 bytes)
+   f(0) = -303
+   f(1) = -304
+   f(-7) = -296
+   f(123) = -426
+   f(100000) = -100303
+   f(2147483647) = 2147483346
+
+== matriz_sub_p0_c5.txt  (codigo gerado: 39 bytes)
+   f(0) = -5
+   f(1) = -4
+   f(-7) = -12
+   f(123) = 118
+   f(100000) = 99995
+   f(2147483647) = 2147483642
+
+== matriz_sub_p0_neg129.txt  (codigo gerado: 41 bytes)
+   f(0) = 129
+   f(1) = 130
+   f(-7) = 122
+   f(123) = 252
+   f(100000) = 100129
+   f(2147483647) = -2147483520
+
+== matriz_sub_p0_c100000.txt  (codigo gerado: 41 bytes)
+   f(0) = -100000
+   f(1) = -99999
+   f(-7) = -100007
+   f(123) = -99877
+   f(100000) = 0
+   f(2147483647) = 2147383647
+
+== matriz_sub_p0_p0.txt  (codigo gerado: 39 bytes)
+   f(0) = 0
+   f(1) = 0
+   f(-7) = 0
+   f(123) = 0
+   f(100000) = 0
+   f(2147483647) = 0
+
+== matriz_sub_p0_v0.txt  (codigo gerado: 39 bytes)
+   f(0) = -3
+   f(1) = -3
+   f(-7) = -3
+   f(123) = -3
+   f(100000) = -3
+   f(2147483647) = -3
+
+== matriz_sub_v0_c5.txt  (codigo gerado: 39 bytes)
+   f(0) = -2
+   f(1) = -1
+   f(-7) = -9
+   f(123) = 121
+   f(100000) = 99998
+   f(2147483647) = 2147483645
+
+== matriz_sub_v0_neg129.txt  (codigo gerado: 41 bytes)
+   f(0) = 132
+   f(1) = 133
+   f(-7) = 125
+   f(123) = 255
+   f(100000) = 100132
+   f(2147483647) = -2147483517
+
+== matriz_sub_v0_c100000.txt  (codigo gerado: 41 bytes)
+   f(0) = -99997
+   f(1) = -99996
+   f(-7) = -100004
+   f(123) = -99874
+   f(100000) = 3
+   f(2147483647) = 2147383650
+
+== matriz_sub_v0_p0.txt  (codigo gerado: 39 bytes)
+   f(0) = 3
+   f(1) = 3
+   f(-7) = 3
+   f(123) = 3
+   f(100000) = 3
+   f(2147483647) = 3
+
+== matriz_sub_v0_v0.txt  (codigo gerado: 39 bytes)
+   f(0) = 0
+   f(1) = 0
+   f(-7) = 0
+   f(123) = 0
+   f(100000) = 0
+   f(2147483647) = 0
+
+== matriz_mul_c7_c5.txt  (codigo gerado: 41 bytes)
+   f(0) = 35
+   f(1) = 35
+   f(-7) = 35
+   f(123) = 35
+   f(100000) = 35
+   f(2147483647) = 35
+
+== matriz_mul_c7_neg129.txt  (codigo gerado: 44 bytes)
+   f(0) = -903
+   f(1) = -903
+   f(-7) = -903
+   f(123) = -903
+   f(100000) = -903
+   f(2147483647) = -903
+
+== matriz_mul_c7_c100000.txt  (codigo gerado: 44 bytes)
+   f(0) = 700000
+   f(1) = 700000
+   f(-7) = 700000
+   f(123) = 700000
+   f(100000) = 700000
+   f(2147483647) = 700000
+
+== matriz_mul_c7_p0.txt  (codigo gerado: 42 bytes)
+   f(0) = 0
+   f(1) = 7
+   f(-7) = -49
+   f(123) = 861
+   f(100000) = 700000
+   f(2147483647) = 2147483641
+
+== matriz_mul_c7_v0.txt  (codigo gerado: 42 bytes)
+   f(0) = 21
+   f(1) = 28
+   f(-7) = -28
+   f(123) = 882
+   f(100000) = 700021
+   f(2147483647) = -2147483634
+
+== matriz_mul_neg300_c5.txt  (codigo gerado: 41 bytes)
+   f(0) = -1500
+   f(1) = -1500
+   f(-7) = -1500
+   f(123) = -1500
+   f(100000) = -1500
+   f(2147483647) = -1500
+
+== matriz_mul_neg300_neg129.txt  (codigo gerado: 44 bytes)
+   f(0) = 38700
+   f(1) = 38700
+   f(-7) = 38700
+   f(123) = 38700
+   f(100000) = 38700
+   f(2147483647) = 38700
+
+== matriz_mul_neg300_c100000.txt  (codigo gerado: 44 bytes)
+   f(0) = -30000000
+   f(1) = -30000000
+   f(-7) = -30000000
+   f(123) = -30000000
+   f(100000) = -30000000
+   f(2147483647) = -30000000
+
+== matriz_mul_neg300_p0.txt  (codigo gerado: 42 bytes)
+   f(0) = 0
+   f(1) = -300
+   f(-7) = 2100
+   f(123) = -36900
+   f(100000) = -30000000
+   f(2147483647) = 300
+
+== matriz_mul_neg300_v0.txt  (codigo gerado: 42 bytes)
+   f(0) = -900
+   f(1) = -1200
+   f(-7) = 1200
+   f(123) = -37800
+   f(100000) = -30000900
+   f(2147483647) = -600
+
+== matriz_mul_p0_c5.txt  (codigo gerado: 39 bytes)
+   f(0) = 0
+   f(1) = 5
+   f(-7) = -35
+   f(123) = 615
+   f(100000) = 500000
+   f(2147483647) = 2147483643
+
+== matriz_mul_p0_neg129.txt  (codigo gerado: 42 bytes)
+   f(0) = 0
+   f(1) = -129
+   f(-7) = 903
+   f(123) = -15867
+   f(100000) = -12900000
+   f(2147483647) = -2147483519
+
+== matriz_mul_p0_c100000.txt  (codigo gerado: 42 bytes)
+   f(0) = 0
+   f(1) = 100000
+   f(-7) = -700000
+   f(123) = 12300000
+   f(100000) = 1410065408
+   f(2147483647) = -100000
+
+== matriz_mul_p0_p0.txt  (codigo gerado: 40 bytes)
+   f(0) = 0
+   f(1) = 1
+   f(-7) = 49
+   f(123) = 15129
+   f(100000) = 1410065408
+   f(2147483647) = 1
+
+== matriz_mul_p0_v0.txt  (codigo gerado: 40 bytes)
+   f(0) = 0
+   f(1) = 4
+   f(-7) = 28
+   f(123) = 15498
+   f(100000) = 1410365408
+   f(2147483647) = 2147483646
+
+== matriz_mul_v0_c5.txt  (codigo gerado: 39 bytes)
+   f(0) = 15
+   f(1) = 20
+   f(-7) = -20
+   f(123) = 630
+   f(100000) = 500015
+   f(2147483647) = -2147483638
+
+== matriz_mul_v0_neg129.txt  (codigo gerado: 42 bytes)
+   f(0) = -387
+   f(1) = -516
+   f(-7) = 516
+   f(123) = -16254
+   f(100000) = -12900387
+   f(2147483647) = 2147483390
+
+== matriz_mul_v0_c100000.txt  (codigo gerado: 42 bytes)
+   f(0) = 300000
+   f(1) = 400000
+   f(-7) = -400000
+   f(123) = 12600000
+   f(100000) = 1410365408
+   f(2147483647) = 200000
+
+== matriz_mul_v0_p0.txt  (codigo gerado: 40 bytes)
+   f(0) = 0
+   f(1) = 4
+   f(-7) = 28
+   f(123) = 15498
+   f(100000) = 1410365408
+   f(2147483647) = 2147483646
+
+== matriz_mul_v0_v0.txt  (codigo gerado: 40 bytes)
+   f(0) = 9
+   f(1) = 16
+   f(-7) = 16
+   f(123) = 15876
+   f(100000) = 1410665417
+   f(2147483647) = 4

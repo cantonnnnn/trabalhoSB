@@ -1,0 +1,4 @@
+function
+zret p0 $99
+ret $1
+end

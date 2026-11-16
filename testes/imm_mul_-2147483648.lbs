@@ -1,0 +1,4 @@
+function
+v0 = p0 * $-2147483648
+ret v0
+end

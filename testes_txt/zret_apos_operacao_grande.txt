@@ -1,0 +1,6 @@
+function
+v0 = p0 * $100000
+v1 = v0 * $100000
+zret v1 $1
+ret $2
+end
