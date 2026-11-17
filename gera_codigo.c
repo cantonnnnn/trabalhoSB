@@ -123,12 +123,11 @@ void gera_codigo(FILE *f, unsigned char code[], funcp *entry)
     char comando[20];
     char a[20], b[20], op;
     int i = 0;      /*proxima posicao livre em code*/
-    int function_start[50];     /*inicio de cada funcao LBS*/
-    int num_functions = 0;
-    int var, num_func, salto;
-    int saltos_fim[50];     /*posicao do rel32 de cada jmp (de ret/zret) que vai para o end*/
     int num_saltos = 0;
-    int fim, k, p, rel;
+    int num_functions = 0;
+    int var, num_func, salto,fim, k, p, rel;
+    int saltos_fim[50];     /*posicao do rel32 de cada jmp (de ret/zret) que vai para o end*/
+    int function_start[50];     /*inicio de cada funcao LBS*/
     
     *entry = NULL;
     while (fgets(linha, sizeof(linha), f) != NULL)
@@ -152,7 +151,7 @@ void gera_codigo(FILE *f, unsigned char code[], funcp *entry)
             fim = i;                       /*aqui comeca o leave; ret desta funcao*/
             grava_byte(code, &i, 0xC9);    /*leave*/
             grava_byte(code, &i, 0xC3);    /*ret*/
-            for (k = 0; k < num_saltos; k++)    /*preenche os jmp de ret/zret*/
+            for (k = 0; k < num_saltos; k++)    /*preenche quaisquer jmp de ret/zret*/
             {
                 p = saltos_fim[k];
                 rel = fim - (p + 4);       /*destino - endereco da proxima instrucao*/
