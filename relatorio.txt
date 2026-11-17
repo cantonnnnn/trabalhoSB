@@ -1,0 +1,39 @@
+Eduardo Canton 2410837 3WC
+Gabriel Petillo 2521319 3WC
+
+Nossos testes não apresentaram nenhum erro ao compilar nosso programa gera_codigo.c, a funçao le o arquivo LBS e gera o codigo de maquina.
+As operaçoes aritmeticas, ret, zret, call, constatntes, variaveis e parametros tambem estao funcionando corretamente.
+A pilha fica alinhada com 16bytes na chamada
+Fizemos um conjunto de testes, incluindo os 4 exemplos do enunciado e usamos a main do enunciado
+Alguns dos testes que fizemos (além das 4 do enunciado)
+
+fibonacci
+function
+    v0 = p0 - $1
+    zret p0 $0
+    zret v0 $1
+    v1 = call 0 v0
+    v2 = p0 - $2
+    v2 = call 0 v2
+    v1 = v1 + v2
+    ret v1
+    end
+f(0) =0   f(10) =55      f(20) =6765
+
+constantes grandes
+function
+    v0 = $1000 * p0
+    v1 = $-200 - v0
+    v2 = v1 + $70000
+    v3 = p0 - $-5
+    v4 = v3 * v2
+    ret v4
+    end
+f(2) = 474600
+
+overflow 32 bits
+function
+    v0 = p0 + $2147483647
+    ret v0
+    end
+f(1) = -2147483648
